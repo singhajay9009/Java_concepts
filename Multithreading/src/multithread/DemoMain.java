@@ -3,17 +3,22 @@ package multithread;
 public class DemoMain {
 
     public static void main(String[] args) throws InterruptedException {
-        int num = 4;
-//        for (int i=0; i<num; i++){
-//            MyThread myThread = new MyThread(new MyThread());
+
+        // when we use Thread creation by extending Thread class
+//        for (int i=0; i<4; i++){
+//            MyThread myThread = new MyThread();
 //            myThread.start();
 //        }
-
-//        for (int i=0; i<num; i++){
+// =============================================================
+        // When we create Thread by implementing java.lang.Runnable
+//        for (int i=0; i<4; i++){
 //            Thread thread = new Thread(new MyThreadTwo());
 //            thread.start();
 //        }
 
+// =============================================================
+
+        // join method makes other thread to wait
         Thread t1 = new Thread(new MyThreadThree());
         Thread t2 = new Thread(new MyThreadThree());
         Thread t3 = new Thread(new MyThreadThree());

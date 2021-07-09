@@ -1,0 +1,2 @@
+# Every java program has atleast 1 thread
+# In a multithreaded env, main method first triggers a child thread.
