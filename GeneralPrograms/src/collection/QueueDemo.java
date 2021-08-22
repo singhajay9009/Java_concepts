@@ -9,6 +9,8 @@ public class QueueDemo {
         List<String> list = new ArrayList<>(Arrays.asList("Vijay", "Viktor", "James", "Erik"));
 
         Queue<String> queue = new PriorityQueue<>();
+
+
       //  queue.addAll(list);
 
 //        for(String s : queue){
