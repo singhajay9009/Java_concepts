@@ -22,7 +22,7 @@ public class ListStudents {
                 .comparing((Student s) -> s.getName())
                 .thenComparing(s -> s.getAge());
 
-        // Comparator using method reference ( best way for Comparators )
+        // Comparator using method reference (best way for Comparators )
         Comparator<Student> studentComp = Comparator
                 .comparing(Student::getName)
                .thenComparing(Student::getAge);
