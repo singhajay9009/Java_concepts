@@ -20,8 +20,6 @@ public class PasswordStorageServiceTest {
     public static void init(){
         userName = "abcTRUYioq";
         password = "Abc$45";
-
-
     }
 
     @BeforeEach
