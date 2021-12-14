@@ -24,6 +24,8 @@ public class MapSample {
 
         map.getOrDefault(5, "Police");
 
+
+
         map.entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue())

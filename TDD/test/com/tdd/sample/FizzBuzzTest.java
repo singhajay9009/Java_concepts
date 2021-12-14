@@ -1,10 +1,10 @@
 package com.tdd.sample;
 
-
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
+//import static org.junit.Assert.*;
 
 public class FizzBuzzTest {
 
@@ -14,6 +14,10 @@ public class FizzBuzzTest {
     public void testNormalNumbers(){
         assertEquals("1", fizzBuzz.convertNum(1));
         assertEquals("2", fizzBuzz.convertNum(2));
+    }
+
+    public void shouldReturnNumberForAnyNormalNumberOtherThanThreeOrFive(){
+
     }
 
     @Test
@@ -29,6 +33,18 @@ public class FizzBuzzTest {
     @Test
     public void testMultipleOfThreeAndFive(){
         assertEquals("FizzBuzz", fizzBuzz.convertNum(15));
+    }
+
+    /* we put one more requirement if no is 53, then throw exception that "invalid no."
+
+     */
+
+    @Test
+    public void testInvalidNumber(){
+        int num = 53;
+        Throwable exception = assertThrows(IllegalArgumentException.class,
+                () -> fizzBuzz.convertNum(num));
+        assertEquals("Invalid no.", exception.getMessage());
     }
 
 }

@@ -14,5 +14,13 @@ public class ListSample {
         Iterator<String> iterator = linkedList.descendingIterator();
 
 
+        List<Integer> list1 = new ArrayList<>(
+                Arrays.asList(2, 3));
+
+
+
+
+
+
     }
 }

@@ -84,6 +84,7 @@ public class PasswordStorageServiceTest {
         when(credStoreMap.get(userName)).thenReturn(password);
 
         assertEquals(password, passwordStorageService.retrievePassWord(userName));
+
     }
 
     @Test

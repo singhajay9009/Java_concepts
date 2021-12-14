@@ -1,5 +1,6 @@
 package optional;
 
+import java.util.Locale;
 import java.util.Optional;
 
 public class OptionalSample {
@@ -18,6 +19,21 @@ public class OptionalSample {
         System.out.println("This is name1: " + name1);
 
         Optional<String> opt2 = Optional.ofNullable(name);
+
+
+        String str2 = "java";
+        Optional<String> opt = Optional.ofNullable(str2);
+    //    System.out.println("This is empty string: " + opt.isEmpty());
+
+        opt.ifPresent(s -> System.out.println(s.toUpperCase()));
+
+        String str3 = Optional.ofNullable(str2).filter(s -> !s.isEmpty())
+                .orElseThrow(IllegalArgumentException::new);
+
+     //   String str3 = Optional.ofNullable(str2).orElseThrow(IllegalArgumentException::new);
+
+
+        System.out.println("String value: " + str3);
 
 
     }

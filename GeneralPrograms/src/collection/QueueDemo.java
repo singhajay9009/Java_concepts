@@ -22,12 +22,13 @@ public class QueueDemo {
         queue.add("James");
         queue.add("Yanki");
         queue.add("Ana");
+     //   queue.poll()
 
         System.out.println(queue.element());
 
         System.out.println(queue.peek());
 
-      //  System.out.println(queue.offer());
+   //    System.out.println(queue.offer());
 
     }
 }

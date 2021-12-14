@@ -18,7 +18,7 @@ public class ListOperationTest {
     */
 
     private List<Integer> list = new ArrayList<>();
-    private ListOperation listOperation = new ListOperation(list);;
+    private ListOperation listOperation = new ListOperation(list);
 
     @Test
     @DisplayName("Add an item in the list")
