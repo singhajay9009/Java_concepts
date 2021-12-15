@@ -1,6 +1,5 @@
-package sample4;
+package com.tdd.sample4;
 
-import com.tdd.sample4.SetOperation;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
