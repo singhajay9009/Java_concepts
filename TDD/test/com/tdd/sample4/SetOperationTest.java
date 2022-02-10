@@ -19,20 +19,20 @@ public class SetOperationTest {
     }
 
     @Test
-    public void testAddItem(){
+    public void returnTrueOnAddingItem(){
        int num = 4;
        Assert.assertTrue(setOperation.add(num));
     }
 
     @Test
-    public void testRemoveItem(){
+    public void returnTrueOnRemovingItem(){
         int num =10;
         set.add(num);
         Assert.assertTrue(setOperation.remove(num));
     }
 
     @Test
-    public void testShouldNotAllowDuplicate(){
+    public void returnFalseOnAddingDuplicateItem(){
         int num = 12;
         set.add(num);
         Assert.assertFalse(setOperation.add(num));

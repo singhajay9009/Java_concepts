@@ -1,0 +1,132 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > ArrayOperation</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.test.demo</a>
+</div>
+
+<h1>Coverage Summary for Class: ArrayOperation (com.test.demo)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ArrayOperation</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/7)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.test.demo;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import java.util.Arrays;
+<i class="no-highlight">4</i>&nbsp;import java.util.Collections;
+<i class="no-highlight">5</i>&nbsp;import java.util.List;
+<i class="no-highlight">6</i>&nbsp;import java.util.Optional;
+<i class="no-highlight">7</i>&nbsp;import java.util.stream.Collectors;
+<i class="no-highlight">8</i>&nbsp;
+<b class="fc"><i class="no-highlight">9</i>&nbsp;public class ArrayOperation {</b>
+<i class="no-highlight">10</i>&nbsp;
+<i class="no-highlight">11</i>&nbsp;    public int getNthLargestInt(int[] arrInt, int n) {
+<i class="no-highlight">12</i>&nbsp;        //Optional.ofNullable(arrInt).isEmpty()
+<b class="fc"><i class="no-highlight">13</i>&nbsp;        if( arrInt== null || arrInt.length == 0) throw new IllegalArgumentException(&quot;Array can&#39;t be empty or null&quot;);</b>
+<b class="fc"><i class="no-highlight">14</i>&nbsp;        if(n &lt; 1 || n &gt; arrInt.length) throw new IllegalArgumentException(&quot;n must be in range 1=&lt; n &lt;=ArraySize&quot;);</b>
+<i class="no-highlight">15</i>&nbsp;//        Optional.ofNullable(arrInt).orElseThrow(() -&gt; new IllegalArgumentException(&quot;Array can&#39;t be null&quot;));
+<i class="no-highlight">16</i>&nbsp;//        if(arrInt.length == 0) throw new IllegalArgumentException(&quot;Array can&#39;t be empty&quot;);
+<i class="no-highlight">17</i>&nbsp;
+<i class="no-highlight">18</i>&nbsp;//        if(n &gt; arrInt.length) throw new IllegalArgumentException(&quot;N can&#39;t be greater than count of elements in Array&quot;);
+<i class="no-highlight">19</i>&nbsp;//        if(n &lt; 1) throw new IllegalArgumentException(&quot;N can&#39;t be less than 1&quot;);
+<i class="no-highlight">20</i>&nbsp;
+<b class="fc"><i class="no-highlight">21</i>&nbsp;        List&lt;Integer&gt; listInt = Arrays.stream(arrInt).boxed().</b>
+<b class="fc"><i class="no-highlight">22</i>&nbsp;                collect(Collectors.toList());</b>
+<b class="fc"><i class="no-highlight">23</i>&nbsp;        Collections.sort(listInt);</b>
+<i class="no-highlight">24</i>&nbsp;
+<b class="fc"><i class="no-highlight">25</i>&nbsp;        return listInt.get(listInt.size()-n);</b>
+<i class="no-highlight">26</i>&nbsp;    }
+<i class="no-highlight">27</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-12-16 12:55</div>
+</div>
+</body>
+</html>

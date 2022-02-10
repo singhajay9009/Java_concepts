@@ -13,12 +13,18 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ListOperationTest {
 
     /* Test Runner always loads the instance variables everytime a new test method ( @Test) runs
-    So there is no need to define method like @BeforeAll or @BeforeEach just for
+    So there is no need to define method like @BeforeEach just for
     initializing instance variables
     */
 
-    private List<Integer> list = new ArrayList<>();
-    private ListOperation listOperation = new ListOperation(list);
+    private static List<Integer> list;
+    private static ListOperation listOperation;
+
+    @BeforeAll
+    public static void init(){
+        list = new ArrayList<>();
+        listOperation = new ListOperation(list);
+    }
 
     @Test
     @DisplayName("Add an item in the list")

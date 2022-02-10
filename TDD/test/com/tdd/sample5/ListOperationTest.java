@@ -1,6 +1,7 @@
 package com.tdd.sample5;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -10,7 +11,12 @@ import java.util.Optional;
 
 public class ListOperationTest {
 
-    private ListOperation listOperation = new ListOperation();
+    private ListOperation listOperation;
+
+    @Before
+    public void setUp(){
+        listOperation = new ListOperation();
+    }
 
     @Test
     public void returnSecondLargestInteger(){
@@ -52,7 +58,7 @@ public class ListOperationTest {
     // verify exception is thrown
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowExceptionIfListIsNull_2ndWay(){
-        List<Integer> listInt = null;
-        listOperation.getSecondLargestInteger(listInt);
+        List<Integer> numbers = null;
+        listOperation.getSecondLargestInteger(numbers);
     }
 }

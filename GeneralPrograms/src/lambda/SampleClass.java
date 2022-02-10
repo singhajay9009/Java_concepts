@@ -14,5 +14,21 @@ public class SampleClass {
         con.accept("sdasd");
 
         list.add(2);
+
+
+
+        System.out.println("Hello World!");
+
+        Executable executable = System.out::println;
     }
 }
+
+/* Lambda expression is something which needs to have return type identical to
+    a functional interface
+ */
+
+interface Executable{
+    void doTask(String str);
+}
+
+

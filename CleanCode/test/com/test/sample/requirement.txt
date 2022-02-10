@@ -1,0 +1,11 @@
+  /* 1. boolean add(String userName, String password) -> to add username and password
+         1.1 userName == null or "" -> throw Exception
+         1.2 password == null or "" -> throw Exception
+         1.3 password has to be combination of lowercase, uppercase, specialCase chars
+         1.4 password length min 8 chars
+
+       */
+
+    2. update(String userName, String password) -> to update the password for username
+    // retrieve(String userName) -> to retrieve password for given userName
+    // delete(String userName) -> to delete the pair

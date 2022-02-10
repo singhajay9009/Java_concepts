@@ -7,7 +7,9 @@ public class EmployeeService {
 
     public List<Employee> getEmployeesWithHigerSalary(List<Employee> list, int salary){
 
-        return list.stream().filter(e -> e.getSalary()> salary).collect(Collectors.toList());
+        return list.stream()
+                .filter(e -> e.getSalary()> salary)
+                .collect(Collectors.toList());
 
     }
 }
