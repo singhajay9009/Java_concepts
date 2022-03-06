@@ -10,12 +10,10 @@ public class SampleClass {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList(Arrays.asList(1,2,3,4));
 
-        Consumer con = (Object text) -> System.out.print(text);
+        Consumer<Object> con = (Object text) -> System.out.print(text);
         con.accept("sdasd");
 
         list.add(2);
-
-
 
         System.out.println("Hello World!");
 

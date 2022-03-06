@@ -2,13 +2,14 @@ package collection;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ListForNullAndEmpty {
 
     public static void main(String[] args) {
 
-        List<Object> list = Arrays.asList(null, 23, "Ajay", "");
+        List<Object> list = Arrays.asList(null, 23, "Ajay", "", null);
 
         System.out.println(list.contains(null));  //true
 
@@ -30,5 +31,6 @@ public class ListForNullAndEmpty {
         boolean isIllegalString = list5.stream().anyMatch(s ->
                 s == null || s.trim().equals("") );
         System.out.println("Illegal: " + isIllegalString);
+
     }
 }

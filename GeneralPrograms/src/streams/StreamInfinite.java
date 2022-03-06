@@ -1,5 +1,7 @@
 package streams;
 
+import java.util.Random;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamInfinite {
@@ -23,5 +25,14 @@ public class StreamInfinite {
         Stream.generate(Math::random)
                 .limit(5)
                 .forEach(System.out::println);
+
+
+//        Stream<Double> stream = Stream.generate(Math::random);
+//
+//        stream.forEach(System.out::println);
+
+        // generating Stream of infinite integers
+        Random random = new Random();
+        IntStream.generate(random::nextInt).forEach(System.out::println);
     }
 }

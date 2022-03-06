@@ -1,6 +1,10 @@
 package collection;
 
+import designPatterns.Employee;
+
+import java.util.Arrays;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class ArraySample {
 
@@ -34,14 +38,29 @@ public class ArraySample {
 //            }
 //        }
 
+        Arrays.stream(elements).collect(Collectors.toSet());
+        Arrays.stream(elements).distinct().collect(Collectors.toList());
         elements[2] = null;
         for(Object e: elements){
             System.out.println(e);
         }
 
+        int[] numbers = new int[2];
+        System.out.println(numbers[0]);
 
+        Employee[] employees = new Employee[4];
+        System.out.println("Print Employee");
+        for(Employee employee: employees){
+            System.out.println(employee);
+        }
+        System.out.println("~~~~~~~");
+        new ArraySample().getEmployess();
+    }
 
-
-
+    public void getEmployess(){
+        int i;
+        Employee[] employees ;//= new Employee[2];
+        Employee emp;
+        System.out.println();
     }
 }

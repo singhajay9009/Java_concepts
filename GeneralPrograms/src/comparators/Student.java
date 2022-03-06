@@ -1,6 +1,8 @@
 package comparators;
 
 
+import java.util.Objects;
+
 public class Student {
 
     private String name;
@@ -37,4 +39,26 @@ public class Student {
                 ", age=" + age +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+     //   if(o == null || !(o instanceof Student)) return false;
+        Student student = (Student) o;
+        return age == student.age && name.equals(student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+
+//    @Override
+//    public int hashCode(){
+//        int x = 31;
+//        int hashCode = (x)*(name.hashCode());
+//        hashCode = hashCode + age;
+//        return hashCode;
+//    }
 }

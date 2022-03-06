@@ -34,7 +34,7 @@ public class Stream3 {
         List<Product> listProducts = new Stream3().getProducts();
 
         List<String> productNames = stream
-                .filter(p -> p.getPrice()> 100.00)
+                .filter(e-> e.getPrice()> 100.00)
                 .map(Product::getName)
                 .distinct()
                 .collect(Collectors.toList());

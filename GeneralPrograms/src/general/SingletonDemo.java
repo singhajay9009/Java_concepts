@@ -21,11 +21,11 @@ class SampleSingleton{
     public static SampleSingleton getClassInstance(){
         if(sampleSingleton == null){
             synchronized (SampleSingleton.class){
-                return new SampleSingleton();
+                sampleSingleton =  new SampleSingleton();
             }
-        }else{
-            return sampleSingleton;
         }
+    return sampleSingleton;
+
     }
 
     public void readMessage(String msg){

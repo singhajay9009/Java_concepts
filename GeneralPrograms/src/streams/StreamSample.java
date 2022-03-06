@@ -24,7 +24,11 @@ public class StreamSample {
         Stream<String> st3 = Arrays.stream(new String[]{"2", "wter", "tangosncld"});
 
         Optional<String> str = st2.filter(e -> e.contains("we")).findAny();
+
+        boolean bl =  st2.allMatch(e -> e.contains("we"));
+
         System.out.println(str.get());
+     //   st2.distinct();
 
 //        Optional<String> str2 = st2.filter(e -> e.contains("we")).findAny();
 //        System.out.println(str2.get());

@@ -29,10 +29,16 @@ public class MapSample {
 
         map.entrySet()
                 .stream()
-                .sorted(Map.Entry.comparingByValue())
+                .sorted(Map.Entry.comparingByKey())
                 .forEach(System.out::println);
         System.out.println("-----------------");
 
+
+        map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByKey(Comparator.reverseOrder()))
+                .forEach(System.out::println);
+        System.out.println("-----------------");
         //not sorted
         for(int i: map.keySet()){
             System.out.println(i + "===" + map.get(i));

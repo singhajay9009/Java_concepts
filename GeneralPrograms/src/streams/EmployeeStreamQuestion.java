@@ -25,7 +25,10 @@ public class EmployeeStreamQuestion {
 
         List<String> emps=  employees.stream()
                 .filter(e -> e != null && e.getCity() != null && e.getCity().equals("Berlin"))
-                .map(Employee::getName).filter(Objects::nonNull).distinct().collect(Collectors.toList());
+                .map(Employee::getName)
+                .filter(Objects::nonNull)
+                .distinct()
+                .collect(Collectors.toList());
 
         return emps;
 

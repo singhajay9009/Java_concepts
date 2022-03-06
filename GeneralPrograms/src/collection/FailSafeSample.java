@@ -17,7 +17,10 @@ public class FailSafeSample {
             System.out.println(i);
             if(i == 2){
                 list.add(5);
+                list.remove((Integer)2);
             }
         }
+
+        System.out.println(list);
     }
 }

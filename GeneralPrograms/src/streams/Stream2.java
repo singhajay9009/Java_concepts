@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 public class Stream2 {
 
     public static void main(String[] args) {
-        Stream<String> st1 = Stream.of("IN", "DE", "NL", "USA", "DEUTSCHLAND", "DEUSCHE");
+        Stream<String> st1 = Stream.of("IN",  "NL", "USA", "DEUTSCHLAND", "DE","PamDEtr");
 
         List<String> c =  st1.filter(e -> e.contains("DE"))
                 .map(String::toLowerCase)

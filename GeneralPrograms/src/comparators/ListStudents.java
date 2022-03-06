@@ -10,10 +10,10 @@ public class ListStudents {
         Student s2 = new Student("Ela", 21);
         Student s3 = new Student("Rick", 25);
 
-        List<Student> list = new ArrayList<>(Arrays.asList(s1, s2, s3));
+        List<Student> list = Arrays.asList(s1, s2, s3);
 
         // Using lambda to define comparators ( single comparator )
-        Comparator<Student> sCompName = (Student p1, Student p2) -> p1.getName().compareTo(p2.getName());
+        Comparator<Student> sCompName = (p1, p2) -> p1.getName().compareTo(p2.getName());
         Comparator<Student> sCompAge = (Student p1, Student p2) -> Integer.compare(p1.getAge(), p2.getAge());
 
 
@@ -41,5 +41,11 @@ public class ListStudents {
         Collections.sort(list, studentComp.reversed());
 
         list.forEach(System.out::println);
+
+        Collections.sort(list, studentComp);
+
+        list.forEach(System.out::println);
+
+
     }
 }
